@@ -1,0 +1,42 @@
+<div class="limiter">
+  
+  <div class="container-table100">
+    
+    <div class="wrap-table100">
+      <div class="table100 mb-4">
+        <form>
+          <div class="row">
+            <div class="col">
+              <input (keyup.enter)="agregar(restaurante.value, ciudad.value)" type="text" class="form-control" placeholder="Nombre del restaurante" #restaurante>
+            </div>
+            <div class="col">
+              <input (keyup.enter)="agregar(restaurante.value, ciudad.value)" type="text" class="form-control" placeholder="Ciudad" #ciudad>
+            </div>
+            <div class="col">
+             <button (click)="agregar(restaurante.value, ciudad.value)" class="btn btn-info" type="button">agregar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="table100">
+        <table>
+          <thead>
+            <tr class="table100-head">
+              <th class="column1">Restaurante</th>
+              <th class="column2">Ciudad</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let restaurante of restaurantes; let i=index">
+                <td class="column1"> {{ restaurante[0] }} </td>
+                <td class="column2"> {{ restaurante[1] }} </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
